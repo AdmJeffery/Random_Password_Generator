@@ -21,13 +21,22 @@ var charArray = "";
 
 
  var useUpCase = confirm("Would you like to have upper case characters?");
+
+ var useLowCase = confirm("Would you like to have lower case characters?");
+
+ var useNumbers = confirm("Would you like to have numbers?");
+
+ var useSpecChar = confirm("Would you like to incorporate special characters?");
+
+ 
  
  
  if (yesUpCase === true){
 
  }
- var i;
-
+ 
+var i = 23;
+ 
 
  for (i=0; i<passLength; i++) {
 password = password + charArray[Math.floor(Math.random() * charArray.length)]
