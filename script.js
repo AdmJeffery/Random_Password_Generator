@@ -20,22 +20,31 @@ var charArray = "";
  }
 
 
- var useUpCase = confirm("Would you like to have upper case characters?");
-
- var useLowCase = confirm("Would you like to have lower case characters?");
-
- var useNumbers = confirm("Would you like to have numbers?");
-
- var useSpecChar = confirm("Would you like to incorporate special characters?");
-
  
+
+ function gatherInfo () {
+  
+  var useUpCase = confirm("Would you like to have upper case characters?");
+
+  var useLowCase = confirm("Would you like to have lower case characters?");
  
+  var useNumbers = confirm("Would you like to have numbers?");
  
- if (yesUpCase === true){
+  var useSpecChar = confirm("Would you like to incorporate special characters?");
 
  }
+
+ function generateCharArray () {
+  if (useUpCase === true){
+    charArray.concat(upCase);
+  }
+  
+  
+ }
  
-var i = 23;
+ 
+ 
+var i = 0;
  
 
  for (i=0; i<passLength; i++) {
