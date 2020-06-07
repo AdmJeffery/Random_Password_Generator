@@ -12,18 +12,22 @@ var charArray = "";
   let useNumbers = false;
   let useSpecChar = false;
 
- var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
+  var i = 0;
 
- if (passLength < 8 || passLength >128) {
-   alert = "Please pick a number within the specified range."
-   var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
- }
+
+ 
 
 
  
 
  function gatherInfo () {
   
+  var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
+
+ if (passLength < 8 || passLength >128) {
+   alert = "Please pick a number within the specified range."
+   var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
+ }
   var useUpCase = confirm("Would you like to have upper case characters?");
 
   var useLowCase = confirm("Would you like to have lower case characters?");
@@ -35,16 +39,27 @@ var charArray = "";
  }
 
  function generateCharArray () {
-  if (useUpCase === true){
+  if (useUpCase){
     charArray.concat(upCase);
   }
   
-  
+  if (useLowCase) {
+    charArray.concat(lowCase);
+  }
+
+  if (useNumbers) {
+    charArray.concat(numbers);
+  }
+
+  if (useSpecChar) {
+    charArray.concat(specChar);
+  }
+
  }
  
+
  
- 
-var i = 0;
+
  
 
  for (i=0; i<passLength; i++) {
