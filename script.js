@@ -1,12 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
  
-var developPassword = "";
-var finalPassword = "";
-var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lowCase = "abcdefghijklmnopqrstuvwxyz";
-  var numbers ="0123456789" ;
-  var specChar = "!@#$%^&*(){}><?";
+
+  const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowCase = "abcdefghijklmnopqrstuvwxyz";
+  const numbers ="0123456789" ;
+  const specChar = "!@#$%^&*(){}><?";
 
  var passLength = prompt = "Pick the number of characters you would like in your password between 8 and 128.";
 
@@ -20,8 +19,10 @@ var upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
  if (yesUpCase === true){
 
  }
- 
+ var i;
+for (i=0; i<passLength; i++) {
 
+}
  
 // Write password to the #password input
 function writePassword() {
