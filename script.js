@@ -25,20 +25,26 @@ var charArray = [];
   
    	passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
 
- if (passLength < 8 || passLength >128) {
-   alert = "Please pick a number within the specified range."
+ 	if (passLength < 8 || passLength >128) {
+   		alert = "Please pick a number within the specified range."
    	 passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
  }
  	passLength = parseInt(passLength);
    
-	useUpCase = confirm("Would you like to have upper case characters?");
+	
+	do {
+		
+		useUpCase = confirm("Would you like to have upper case characters?");
 
-   	useLowCase = confirm("Would you like to have lower case characters?");
+   		useLowCase = confirm("Would you like to have lower case characters?");
  
-   	useNumbers = confirm("Would you like to have numbers?");
+   		useNumbers = confirm("Would you like to have numbers?");
  
-   	useSpecChar = confirm("Would you like to incorporate special characters?");
+		useSpecChar = confirm("Would you like to incorporate special characters?");
+	   
+}while (!(useUpCase || useLowCase || useNumbers || useSpecChar));
   
+
   	
  }
 
