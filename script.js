@@ -13,6 +13,7 @@ var charArray = "";
   let useSpecChar = false;
 
   var i = 0;
+  var passLength = "";
 
 
  
@@ -35,7 +36,8 @@ var charArray = "";
   var useNumbers = confirm("Would you like to have numbers?");
  
   var useSpecChar = confirm("Would you like to incorporate special characters?");
-
+  
+  passLength.split(',').map(Number);
  }
 
  function generateCharArray () {
@@ -61,20 +63,27 @@ var charArray = "";
  
 
  
-
- for (i=0; i<passLength; i++) {
-password = password + charArray[Math.floor(Math.random() * charArray.length)]
+function generatePassword() {
+	var password = "";  
+	for (i=0; i<passLength; i++) {
+    	password = password + charArray[Math.floor(Math.random() * charArray.length)]
+	  }
+	  return password;
 }
- 
+
 // Write password to the #password input
 function writePassword() {
+  
+  gatherInfo();
+  generateCharArray();
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
  
-
+console.log(password);
 }
 
 
