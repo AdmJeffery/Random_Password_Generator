@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
  // initial variables
-var charArray = "";
+var charArray = [];
   const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
   const lowCase = "abcdefghijklmnopqrstuvwxyz".split('');
   const numbers ="0123456789".split('') ;
@@ -29,7 +29,9 @@ var charArray = "";
    alert = "Please pick a number within the specified range."
    	 passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
  }
-   	useUpCase = confirm("Would you like to have upper case characters?");
+ 	passLength = parseInt(passLength);
+   
+	useUpCase = confirm("Would you like to have upper case characters?");
 
    	useLowCase = confirm("Would you like to have lower case characters?");
  
@@ -37,24 +39,24 @@ var charArray = "";
  
    	useSpecChar = confirm("Would you like to incorporate special characters?");
   
-  passLength.split(',').map(Number);
+  	
  }
 
  function generateCharArray () {
   if (useUpCase){
-    charArray.concat(upCase);
+    charArray = charArray.concat(upCase);
   }
   
   if (useLowCase) {
-    charArray.concat(lowCase);
+    charArray = charArray.concat(lowCase);
   }
 
   if (useNumbers) {
-    charArray.concat(numbers);
+    charArray = charArray.concat(numbers);
   }
 
   if (useSpecChar) {
-    charArray.concat(specChar);
+    charArray = charArray.concat(specChar);
   }
 
  }
@@ -66,7 +68,8 @@ var charArray = "";
 function generatePassword() {
 	var password = "";  
 	for (i=0; i<passLength; i++) {
-    	password = password + charArray[Math.floor(Math.random() * charArray.length)]
+		var index = Math.floor(Math.random() * charArray.length);
+    	password = password + charArray[index]
 	  }
 	  return password;
 }
