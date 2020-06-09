@@ -13,7 +13,7 @@ var charArray = "";
   let useSpecChar = false;
 
   var i = 0;
-  var passLength = "";
+  var passLength
 
 
  
@@ -23,19 +23,19 @@ var charArray = "";
 
  function gatherInfo () {
   
-  var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
+   	passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
 
  if (passLength < 8 || passLength >128) {
    alert = "Please pick a number within the specified range."
-   var passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
+   	 passLength = prompt("Pick the number of characters you would like in your password between 8 and 128.");
  }
-  var useUpCase = confirm("Would you like to have upper case characters?");
+   	useUpCase = confirm("Would you like to have upper case characters?");
 
-  var useLowCase = confirm("Would you like to have lower case characters?");
+   	useLowCase = confirm("Would you like to have lower case characters?");
  
-  var useNumbers = confirm("Would you like to have numbers?");
+   	useNumbers = confirm("Would you like to have numbers?");
  
-  var useSpecChar = confirm("Would you like to incorporate special characters?");
+   	useSpecChar = confirm("Would you like to incorporate special characters?");
   
   passLength.split(',').map(Number);
  }
