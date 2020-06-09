@@ -34,6 +34,8 @@ var charArray = [];
 	
 	do {
 		
+		alert("You must select one of the following")
+		
 		useUpCase = confirm("Would you like to have upper case characters?");
 
    		useLowCase = confirm("Would you like to have lower case characters?");
